@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  margin-left: 10px;
+}
+section{
+  border: solid palevioletred;
+  margin: 10px;
+  height: 400px;
+  //position: relative;
+  //a tag vai se posicionar de acordo com o fluxo padrão, não vai ter nenhuma alteração na sua posição
+}
+.static{
+  background-color: aquamarine;
+  width: 200px;
+  height: 200px;
+}
+.relative{
+  background-color: violet;
+  width: 200px;
+  height: 200px;
+  //é posicionada de acordo com o seu fluxo normal, ela não vai sair do lugar, porém ela será ajustada para qualquer lado usando as propriedades top, right, left e bottom
+  position: relative;
+  left: 40px;
+  //top: 20px; // a div foi empurradd 20px para baixo
+  //top, right, left e bottom
+}
+.absolute{
+  width: 200px;
+  height: 200px;
+  background-color: rgb(19, 211, 19);
+  position: absolute;
+  //top: 0;
+  //right: 0;
+  //ela será absolta em relação a tag pai, caso tenha position
+  //caso tenha ela vai obedecer a própria tela, o tamanho da tela
+  //left: 20px;
+  //tem dois comportamentos se ajustar ao tamanho da dela ou prender ela dentro de uma caixa, quando a tag pai tiver position
+}
+.sticky{
+  background-color: gold;
+  height: 50px;
+  // colado ou pegajoso
+  position: sticky;
+  top: 0;
+  //pra colocar por cima do conteudo
+  z-index: 1;//usada para níveis de profundidade
+}
